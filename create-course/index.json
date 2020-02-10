@@ -1,0 +1,51 @@
+{
+  "title": "Using ACLs with Nomad",
+  "description": "Learn how to create a collection of Katacoda scenarios into a course",
+  "difficulty": "intermediate",
+  "time": "20-40 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Configure Nomad for ACLs",
+        "text": "step1.md"
+      },
+      {
+        "title": "Bootstrap the ACL System",
+        "text": "step2.md"
+      },
+      {
+        "title": "Upload an Anonymous Policy",
+        "text": "step3.md"
+      },
+      {
+        "title": "Create a Management Token",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "courseData": "courseData.sh",
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
+    "dashboards": [
+      {
+        "name": "Nomad UI",
+        "port": 4646
+      },
+      {
+        "name": "Consul UI",
+        "port": 8200
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
