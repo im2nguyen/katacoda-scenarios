@@ -1,0 +1,1 @@
+This page allows you to keep playing with your lab environment.

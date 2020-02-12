@@ -1,0 +1,37 @@
+{
+  "title": "Task Dependencies in Nomad.",
+  "description": "Learn how declare task ordering in Nomad jobs.",
+  "difficulty": "intermediate",
+  "time": "20-40 minutes",
+  "icon": "fa-nomad",
+  "details": {
+    "steps": [
+      {
+        "title": "Playground",
+        "text": "playground.md"
+      }
+    ],
+    "intro": {
+      "courseData": "courseData.sh",
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mInteractive Bash Terminal.\u001b[m\r\n",
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "Nomad UI",
+        "port": 4646
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
