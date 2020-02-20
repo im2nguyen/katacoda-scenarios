@@ -7,9 +7,13 @@
   "details": {
     "steps": [
       {
+        "title": "Wait for additional components",
+        "text": "wait.md",
+        "code": "introWait.sh"
+      },
+      {
         "title": "Enabling and bootstrapping Consul ACLs",
         "text": "enable.md",
-        "code": "introWait.sh",
         "verify": "enable.md.verify.sh"
       },
       {

@@ -70,6 +70,6 @@ systemctl start consul nomad
 logger "courseData.sh - Installing pyhcl."
 pip install pyhcl
 
-ln /etc/nomad.d/config.hcl nomad.config.hcl
-ln /etc/consul.d/config.hcl consul.config.hcl
+ln /etc/nomad.d/config.hcl nomad_config.hcl
+ln /etc/consul.d/config.hcl consul_config.hcl
 logger "courseData.sh - Done."

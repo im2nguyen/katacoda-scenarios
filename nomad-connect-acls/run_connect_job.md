@@ -1,3 +1,7 @@
+<style type="text/css">
+.lang-screenshot { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+
 Create a blank job file by running `touch countdash.nomad`{{execute}}. Open
 `countdash.nomad`{{open}} in the editor and copy-and-paste this job
 specification into the file.
@@ -72,9 +76,9 @@ service to the count-api service.
 
 Run `consul intention create count-dashboard count-api`{{execute}}
 
-**Example**
+**Example Output**
 
-```shell
+```screenshot
 $ consul intention create count-dashboard count-api
 Created: count-dashboard => count-api (allow)
 ```
@@ -83,8 +87,9 @@ Created: count-dashboard => count-api (allow)
 
 Run the job by calling `nomad run countdash.nomad`{{execute}}.
 
-**Example**
-```shell
+**Example Output**
+
+```screenshot
 $ nomad run countdash.nomad
 ==> Monitoring evaluation "3e7ebb57"
     Evaluation triggered by job "countdash"
@@ -98,11 +103,12 @@ $ nomad run countdash.nomad
 Open the Countdash interface by clicking the "Countdash UI" tab above the 
 terminal.
 
-Once you are done, run `nomad stop countdash` to prepare for the next step.
+Once you are done, run `nomad stop countdash`{{execute}} to prepare for the next
+step.
 
-**Example**
+**Example Output**
 
-```shell
+```screenshot
 $ nomad stop countdash
 ==> Monitoring evaluation "d4796df1"
     Evaluation triggered by job "countdash"

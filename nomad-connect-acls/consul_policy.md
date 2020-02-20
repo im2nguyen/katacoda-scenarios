@@ -1,3 +1,6 @@
+<style type="text/css">
+.noselect { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
 
 You need to create a policy for the Consul Agents.
 
@@ -7,13 +10,14 @@ First, load the management token out of your bootstrap file -
 Verify that your token is working by running `consul members`{{execute}}. If everything
 is working correctly, you should receive output similar this.
 
-**Example**
+**Example Output**
 
-```shell
+```screenshot
 $ consul members
 Node    Address           Status  Type    Build  Protocol  DC   Segment
 host01  172.17.0.25:8301  alive   server  1.7.0  2         dc1  <all>
 ```
+
 ### Create a Consul agent policy
 
 Run `touch consul-agent-policy.hcl`{{execute}} to create a blank policy file.
@@ -41,9 +45,9 @@ consul acl policy create \
 This will upload your policy file to the server and return information about
 the generated policy.
 
-**Example**
+**Example Output**
 
-```shell
+```screenshot
 $ consul acl policy create \
 >   -name "consul-agent-token" \
 >   -description "Consul Agent Token Policy" \
@@ -72,9 +76,9 @@ consul acl token create \
   -policy-name "consul-agent-token" | tee consul-agent.token
 ```{{execute}}
 
-**Example**
+**Example Output**
 
-```shell
+```screenshot
 $ consul acl token create \
 >   -description "Consul Agent Token" \
 >   -policy-name "consul-agent-token" | tee consul-agent.token

@@ -5,9 +5,10 @@ Nomad server.
 
 To prevent this, you can set the `allow_unauthenticated` option to false.
 
-Open the `nomad.config.hcl`{{open}} file and add
+Open the `nomad_config.hcl`{{open}} file and add `allow_unauthenticated` value
+inside of the `consul` configuration block.
 
-<pre class="file" data-filename="nomad.config.hcl">
+<pre class="file" data-target="clipboard">
   allow_unauthenticated = false
 </pre>
 
