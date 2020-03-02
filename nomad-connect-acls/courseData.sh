@@ -1,5 +1,5 @@
 #!/bin/bash
-
+date > /setupTime.txt
 set -m
 chmod +x /var/tmp/waitIntro.sh
 
@@ -74,9 +74,10 @@ install_zip "consul" "https://releases.hashicorp.com/consul/1.7.0/consul_1.7.0_l
 install_zip "nomad" "https://releases.hashicorp.com/nomad/0.10.4/nomad_0.10.4_linux_amd64.zip" &
 
 
-
 logger "courseData.sh - Installing pyhcl."
 pip install pyhcl
 
 ln /etc/consul.d/config.hcl consul_config.hcl
 logger "courseData.sh - Done."
+
+date >> /setupTime.txt
