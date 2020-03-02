@@ -1,7 +1,12 @@
 #!/bin/bash
 date > /setupTime.txt
+
 set -m
 chmod +x /var/tmp/waitIntro.sh
+
+logger() {
+  command logger -f /var/log/courseData.sh.log "$1"
+}
 
 fix_journal() {
   # This fixes an issue with the katacoda base machine that causes journald to
